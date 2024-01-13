@@ -7,8 +7,18 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-
+beautifulsoup4 = "^4.12.2"
+pytest = "^7.4.4"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+scrapper = "amazon_product_extractor.scraper:main"
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(filename)s:%(lineno)s %(asctime)s [%(levelname)8s] %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
