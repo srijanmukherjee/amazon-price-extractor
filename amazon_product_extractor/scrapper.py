@@ -44,7 +44,7 @@ class AmazonScrapper(Scrapper):
             name=self.product_selector.select_name(soup),
             about=self.product_selector.select_about(soup),
             price=self.product_selector.select_price(soup),
-            currency=self.product_selector.select_price(soup),
+            currency=self.product_selector.select_currency(soup),
             rating=self.product_selector.select_rating(soup),
             review_count=self.product_selector.select_review_count(soup),
             discount=self.product_selector.select_discount(soup),
