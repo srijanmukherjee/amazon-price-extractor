@@ -3,6 +3,11 @@ import logging
 from urllib.parse import urlparse
 
 
+class InvalidUrlException(Exception):
+    def __init__(self, url: str) -> None:
+        super().__init__(f"{url} is not a valid")
+
+
 class UrlValidator(ABC):
     @abstractmethod
     def validate(self, url: str) -> bool:

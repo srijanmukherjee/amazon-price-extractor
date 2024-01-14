@@ -2,6 +2,7 @@ from abc import ABC
 from dataclasses import dataclass
 from typing import List, Optional
 
+
 @dataclass
 class Product(ABC):
     name: str
@@ -11,6 +12,10 @@ class Product(ABC):
     rating: Optional[float]
     review_count: Optional[int]
 
+
 @dataclass
 class AmazonProduct(Product):
     about: List[str]
+    discount: str
+    price: float
+    review_count: Optional[str]
